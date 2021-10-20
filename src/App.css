@@ -11,5 +11,18 @@ body {
   backdrop-filter: blur(2.3px);
   -webkit-backdrop-filter: blur(2.3px);
   border: 1px solid rgba(0, 0, 0, 0.3);
-  margin-top: 1rem;
+  margin-top: 5.4rem;
+}
+
+.my-form {
+  margin-top: 5.4rem;
+}
+
+.tombol {
+  background-color: rgba(128, 128, 128, 0.918);
+  border: none;
+  color: rgb(255, 255, 255);
+}
+.tombol:hover {
+  background-color: rgba(128, 128, 128, 0.863);
 }

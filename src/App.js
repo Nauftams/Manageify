@@ -4,6 +4,8 @@ import NavbarComp from "./component/navbar/NavbarComp";
 import "./App.css";
 import { Col, Container, Row } from "react-bootstrap";
 import SidebarComp from "./component/sidebar/SidebarComp";
+import Formulir from "./component/form/Formulir";
+import Tabel from "./component/tabel/Tabel";
 
 class App extends Component {
   render() {
@@ -19,7 +21,8 @@ class App extends Component {
             </Col>
             <Col md={8}>
               <div>
-                <h1>Hello 2</h1>
+                <Formulir />
+                <Tabel />
               </div>
             </Col>
           </Row>
