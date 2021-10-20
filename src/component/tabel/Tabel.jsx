@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 
-const Tabel = () => {
+const Tabel = ({ total }) => {
   return (
     <Table striped bordered hover variant="dark" className="mt-3">
       <thead>
@@ -13,12 +13,19 @@ const Tabel = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Doing Homework</td>
-          <td>Done at 11.00 PM</td>
-          <td></td>
-        </tr>
+        {total.map((totals, index) => {
+          return (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{totals.task}</td>
+              <td>{totals.target}</td>
+              <td>
+                <button className="btn btn-warning me-2">Edit</button>
+                <button className="btn btn-danger">Delete</button>
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </Table>
   );
