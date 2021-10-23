@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 
-const Tabel = ({ total }) => {
+const Tabel = ({ total, editData, deleteData }) => {
   return (
     <Table striped bordered hover variant="dark" className="mt-3">
       <thead>
@@ -20,8 +20,12 @@ const Tabel = ({ total }) => {
               <td>{totals.task}</td>
               <td>{totals.target}</td>
               <td>
-                <button className="btn btn-warning me-2">Edit</button>
-                <button className="btn btn-danger">Delete</button>
+                <button className="btn btn-warning me-2" onClick={() => editData(totals.no)}>
+                  Edit
+                </button>
+                <button className="btn btn-danger" onClick={() => deleteData(totals.no)}>
+                  Delete
+                </button>
               </td>
             </tr>
           );
